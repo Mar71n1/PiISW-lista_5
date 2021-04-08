@@ -1,6 +1,6 @@
 # Repozytorium startowe dla listy nr 5/2021
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![CircleCI](https://circleci.com/gh/pwr-piisw/bookstore.svg?style=svg)](https://circleci.com/gh/pwr-piisw/bookstore)
+[![CircleCI](https://circleci.com/gh/Mar71n1/PiISW-lista_5.svg?style=svg&circle-token=0e1a822c85b7eac566ba885c161f910be8a170e7)](https://circleci.com/gh/Mar71n1/PiISW-lista_5)
 
 ## Jak używać?
 Projekt budujemy Mavenem, z użyciem komendy `mvnw`. Klasycznie:
