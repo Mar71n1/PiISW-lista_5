@@ -18,4 +18,8 @@ export class BooksRestService {
   findBookById(id: string): Observable<Book> {
     return this.http.get<Book>(`/api/books/${id}`);
   }
+
+  delete(id: string): Observable<Book> {
+    return this.http.delete<Book>(`/api/books/${id}`);
+  }
 }

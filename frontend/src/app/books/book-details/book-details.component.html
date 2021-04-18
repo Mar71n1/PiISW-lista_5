@@ -1,6 +1,7 @@
 <section class="page">
   <h1>{{ book.author }}</h1>
   <h1>{{ book.title }}</h1>
+  <button (click)="openDeleteDialog()" class="btn btn-warning" [disabled]="!deleteEnabled">Delete this book</button>
 </section>
 <app-review-form [book]="book" (newReviewSubmitted)="newReviewSubmitted($event)"></app-review-form>
 <div class="reviews-header">

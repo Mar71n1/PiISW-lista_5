@@ -8,6 +8,9 @@ import {BookReviewComponent} from './book-details/book-review/book-review.compon
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { ReviewFormComponent } from './review-form/review-form.component';
 import {FormsModule} from '@angular/forms';
+import { DeleteBookDialogComponent } from './book-details/delete-book-dialog/delete-book-dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -16,13 +19,16 @@ import {FormsModule} from '@angular/forms';
     BookPanelComponent,
     BookDetailsComponent,
     BookReviewComponent,
-    ReviewFormComponent
+    ReviewFormComponent,
+    DeleteBookDialogComponent
   ],
   imports: [
     CommonModule,
     AppRoutingModule,
     MatProgressSpinnerModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule,
+    MatButtonModule
   ]
 })
 export class BooksModule {
