@@ -1,1 +1,78 @@
-<p>review-form works!</p>
+<div>
+  <div class="review-form-header">
+    <h6>Submit new review for this book</h6>
+  </div>
+  <form class="review-form" #reviewForm="ngForm" (ngSubmit)="onSubmit(reviewForm)">
+    <div class="form-group">
+      <label for="author">Author</label>
+      <input
+        required
+        [(ngModel)]="model.author"
+        name="author"
+        #author="ngModel"
+        id="author"
+        type="text"
+        class="form-control"/>
+      <div
+        class="alert alert-danger"
+        *ngIf="author.touched && !author.valid">
+        Author is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input
+        required
+        [(ngModel)]="model.title"
+        name="title"
+        #title="ngModel"
+        id="title"
+        type="text"
+        class="form-control"/>
+      <div
+        class="alert alert-danger"
+        *ngIf="title.touched && !title.valid">
+        Title is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="rate">Rate</label>
+      <select
+        required
+        [(ngModel)]="model.rate"
+        name="rate"
+        #rate="ngModel"
+        id="rate"
+        class="form-control">
+        <option *ngFor="let number of numbers" [value]="number">{{number}}</option>
+      </select>
+      <div
+        class="alert alert-danger"
+        *ngIf="rate.touched && !rate.valid">
+        Rate is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="content">Content</label>
+      <textarea
+        required
+        [(ngModel)]="model.content"
+        name="content"
+        #content="ngModel"
+        id="content"
+        class="form-control">
+    </textarea>
+      <div
+        class="alert alert-danger"
+        *ngIf="content.touched && !content.valid">
+        Content is required.
+      </div>
+    </div>
+    <button
+      type="submit"
+      [disabled]="!reviewForm.valid"
+      class="btn btn-primary">
+      Save
+    </button>
+  </form>
+</div>

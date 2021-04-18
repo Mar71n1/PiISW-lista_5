@@ -7,6 +7,7 @@ import {AppRoutingModule} from '../app-routing.module';
 import {BookReviewComponent} from './book-details/book-review/book-review.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { ReviewFormComponent } from './review-form/review-form.component';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ReviewFormComponent } from './review-form/review-form.component';
   imports: [
     CommonModule,
     AppRoutingModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    FormsModule
   ]
 })
 export class BooksModule {

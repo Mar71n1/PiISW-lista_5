@@ -19,13 +19,22 @@ export class BookDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.book = this.route.snapshot.data.book;
-    this.reviewsService.findReviewsForBook(this.book.id).subscribe((reviews) => {
-      this.reviews = reviews;
-      this.reviewsLoaded = true;
-      console.log(this.reviews);
-    });
+    this.loadReviews();
     console.log('--- book detail ---');
     console.log(this.book);
   }
 
+  newReviewSubmitted(review: Review) {
+    this.loadReviews();
+  }
+
+  private loadReviews() {
+    this.reviewsLoaded = false;
+
+    this.reviewsService.findReviewsForBook(this.book.id).subscribe(reviews => {
+      this.reviews = reviews;
+      this.reviewsLoaded = true;
+      console.log(this.reviews);
+    });
+  }
 }

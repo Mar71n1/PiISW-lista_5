@@ -1,0 +1,25 @@
+[required]  {
+  border-left: 5px solid green; /* green */
+}
+
+.ng-touched.ng-invalid:not(form)  {
+  border-left: 5px solid red;
+}
+
+.h2 {
+  background-color: #7ec699;
+}
+
+.review-form-header {
+  background-color: #56b7e9;
+  color: white;
+  padding: 0.3em 0.8em;
+}
+
+h6 {
+  margin-bottom: 0;
+}
+
+.review-form {
+  margin: 20px 20px;
+}

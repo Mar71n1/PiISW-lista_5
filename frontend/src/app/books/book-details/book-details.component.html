@@ -1,10 +1,13 @@
 <section class="page">
   <h1>{{ book.author }}</h1>
   <h1>{{ book.title }}</h1>
+</section>
+<app-review-form [book]="book" (newReviewSubmitted)="newReviewSubmitted($event)"></app-review-form>
+<div class="reviews-header">
+  <h6>Reviews</h6>
+</div>
+<section class="page">
   <div>
-    <div class="reviews-header">
-      <h6>Reviews</h6>
-    </div>
     <mat-spinner *ngIf="!reviewsLoaded" class="reviews-spinner"></mat-spinner>
     <div *ngIf="reviewsLoaded">
       <app-book-review *ngFor="let review of reviews" [review]="review"></app-book-review>
