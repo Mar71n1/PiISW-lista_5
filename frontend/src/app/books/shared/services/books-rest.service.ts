@@ -14,4 +14,8 @@ export class BooksRestService {
   findAll(): Observable<Book[]> {
     return this.http.get<Book[]>('/api/books');
   }
+
+  findBookById(id: string): Observable<Book> {
+    return this.http.get<Book>(`/api/books/${id}`);
+  }
 }

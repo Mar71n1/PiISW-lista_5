@@ -62,6 +62,11 @@ public class ReviewRepositoryInmem implements ReviewRepository {
 
   @Override
   public Flux<Review> findReviewsForBook(UUID bookId) {
+    try {
+      Thread.sleep(1000);
+    } catch (InterruptedException ex) {
+      ex.printStackTrace();
+    }
     Objects.requireNonNull(bookId);
     return Flux.fromStream(
         reviews.values().stream().filter(review -> review.getBook().equals(bookId)));
