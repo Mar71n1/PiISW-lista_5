@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Book} from "../model/book";
-import {ActivatedRoute} from "@angular/router";
-import {Review} from "../model/review";
-import {ReviewsRestService} from "../shared/services/reviews-rest.service";
+import {Book} from '../model/book';
+import {ActivatedRoute} from '@angular/router';
+import {Review} from '../model/review';
+import {ReviewsRestService} from '../shared/services/reviews-rest.service';
 
 @Component({
   selector: 'app-book-details',
@@ -13,7 +13,7 @@ export class BookDetailsComponent implements OnInit {
 
   book: Book;
   reviews: Review[];
-  reviewsLoaded: boolean = false;
+  reviewsLoaded = false;
 
   constructor(private readonly route: ActivatedRoute, private readonly reviewsService: ReviewsRestService) { }
 
